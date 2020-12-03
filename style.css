@@ -171,6 +171,21 @@ footer a:link{
 	.container{
 		display:inline-block;
 	}
+	.btn2{
+		color:white;
+		background-color:black;
+		margin:auto;
+		border-radius: 10px;
+		display:block;
+		margin-left:auto;
+		margin-right:auto;
+		font-size:1.5em;
+		border:5px solid black;
+	}
+	.btn2:hover{
+		color:black;
+		background-color:white;		
+	}
 }
 
 /* removes wrapper for smaller screens */
