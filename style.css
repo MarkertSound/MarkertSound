@@ -5,22 +5,25 @@ main{
 	padding:15px;
 	padding-top:25px;
 	padding-bottom:50px;
-	animation-name: example;
-	animation-duration: 1.9s;
 	max-width: 1700px;
 	margin:0 auto;
 	border:20px solid black;
+	animation-name: example2;
+	animation-duration: 1.5s;
 }
-
+nav{
+	animation-name: example;
+	animation-duration: 1.5s;
+}
 header{
 	padding-bottom:20px;
 	padding-top:20px;
 }
 body{
     font-family: 'Montserrat', sans-serif;
-    background-color:white;
+    background-color:black;
     animation-name: example;
-	animation-duration: 1.9s;
+	animation-duration: 1.5s;
 }
 h1{
 	font-size:5em;
@@ -41,16 +44,7 @@ nav li{
     font-size:2.0em;
 	padding-left:12px;
 }
-#wrapper{
-	background-color: black;
-	width: 80%;
-	margin: 0 auto;
-	-webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.75);
-	box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.75);
-	animation-name: example2;
-	animation-duration: 1.9s;
-}
+
 h2{
 	display:inline;
 	margin-bottom:1px;
@@ -86,6 +80,8 @@ footer{
 	padding:15px;
 	margin:0;
 	display:block;
+	animation-name: example;
+	animation-duration: 1.9s;
 }
 footer a:link{
     color:white;
@@ -152,12 +148,12 @@ footer a:link{
 		margin-left:10px;
 	}
 	@keyframes example {
-  	from {background-color: black;}
-  	to {background-color: white;}
-	}
-	@keyframes example2 {
   	from {background-color: white;}
   	to {background-color: black;}
+	}
+	@keyframes example2 {
+  	from {background-color: black;}
+  	to {background-color: white;}
 	}
 	.video-responsive{
 	    overflow:hidden;
@@ -171,6 +167,9 @@ footer a:link{
    		height:100%;
    		width:100%;
    		position:absolute;
+	}
+	.container{
+		display:inline-block;
 	}
 }
 
