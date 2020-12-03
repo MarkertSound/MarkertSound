@@ -4,14 +4,14 @@ main{
 	background-color:white;
 	padding:15px;
 	padding-top:25px;
+	padding-bottom:50px;
+	animation-name: example;
+	animation-duration: 1.9s;
+	max-width: 1700px;
+	margin:0 auto;
+	border:20px solid black;
 }
-.mainimg{
-	background-image:url(images/mainimg.jpg);
-	min-width:100%;
-	height:637px;
-	padding: 10px 10px 10px 30px;
-	margin-top:10px;
-}
+
 header{
 	padding-bottom:20px;
 	padding-top:20px;
@@ -19,6 +19,8 @@ header{
 body{
     font-family: 'Montserrat', sans-serif;
     background-color:white;
+    animation-name: example;
+	animation-duration: 1.9s;
 }
 h1{
 	font-size:5em;
@@ -46,13 +48,11 @@ nav li{
 	-webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.75);
 	box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.75);
-}
-main{
-	max-width: 1200px;
-	margin:0 auto;
-	border:20px solid black;
+	animation-name: example2;
+	animation-duration: 1.9s;
 }
 h2{
+	display:inline;
 	margin-bottom:1px;
 	margin-top:5px;
     font-family: 'Roboto', sans-serif;
@@ -74,6 +74,7 @@ h3{
 p{
 	font-family: 'Slabo 27px', serif;
 	font-size:1.5em;
+	text-align:justify;
 }
 blockquote{
 	margin:30px;
@@ -118,20 +119,58 @@ footer a:link{
 	color:#9b9c9e;
 	font-size:2em;
 	font-family:"Bree Serif"
-}
-li a:hover{
-	background-color:#252526;
-}
-a:hover{
-	    text-decoration:none;
-}
-h5{
-	color:black;
-	font-size:2em;
-	padding:50px;
-}
-.mainimg{
-	background-position:-555px 0px;
+	}
+	li a:hover{
+		background-color:#252526;
+	}
+	a:hover{
+		    text-decoration:none;
+	}
+	h5{
+		color:black;
+		font-size:2em;
+		padding:50px;
+	}
+	#img1 img[src="images/comp.jpg"]{
+		float:right;
+		margin-right:10px;
+		margin-left:20px;
+	}
+	#img2 img[src="images/design.JPG"]{
+		float:left;
+		margin-right:20px;
+		margin-left:10px;
+	}
+	#img3 img[src="images/mixing.png"]{
+		float:right;
+		margin-right:10px;
+		margin-left:20px;
+	}
+	#img4 img[src="images/lessons.jpg"]{
+		float:left;
+		margin-right:20px;
+		margin-left:10px;
+	}
+	@keyframes example {
+  	from {background-color: black;}
+  	to {background-color: white;}
+	}
+	@keyframes example2 {
+  	from {background-color: white;}
+  	to {background-color: black;}
+	}
+	.video-responsive{
+	    overflow:hidden;
+	    padding-bottom:56.25%;
+	    position:relative;
+	    height:0;
+	}
+	.video-responsive iframe{
+    	left:0;
+    	top:0;
+   		height:100%;
+   		width:100%;
+   		position:absolute;
 	}
 }
 
@@ -157,9 +196,6 @@ h5{
 		font-size:1.4em;
 		font-family:"Bree Serif";
 
-	}
-	.mainimg{
-	background-position:-399px 0px;
 	}
 	.navbar-brand{
 	font-size:2.0em;
@@ -198,19 +234,12 @@ h5{
 	.navbar-brand{
 		font-size:2em;
 	}
-	.mainimg{
-		background-position:-525px 0px;
-	}
-
 }
 /* CSS for Hamburger menu sized screens */
 	@media only all and (max-width: 575px){
 
-	.mainimg{
-		background-position:-555px 0px;
-	}
 	main{
-		padding-left:30px;
+		padding-left:0px;
 	}
 	li{
 		border-bottom:1px solid white;
@@ -231,6 +260,18 @@ h5{
 		font-family:"Bree Serif";
 	}
 	p{
+		font-size:.8em;
+	}
+	h2{
 		font-size:1.2em;
+	}
+}
+
+@media only screen and (max-width: 400px){
+	p{
+		font-size: .6em;
+	}
+	h2{
+		font-size:1.0em;
 	}
 }
