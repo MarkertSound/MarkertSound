@@ -18,6 +18,14 @@
       <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
       <!-- Custom styles for this template. This is last of the CSS stylesheets, so it can override the Bootsrap CSS. Change the name to the name of your style sheet-->
       <link rel="stylesheet" type="text/css" href="style.css">
+	   
+	<link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Desktop.json", {onProgress: UnityProgress});
+    </script>
    </head>
 
   <body>
@@ -56,14 +64,14 @@
       </nav>
 
   <main>
-         <style>
-		   canvas { 
-            border:solid 1px #000;
-		   }
-	      </style>
-
-		<script src="jsPacMan.js">		
-		</script>
+      <div class="webgl-content">
+      	<div id="unityContainer" style="width: 960px; height: 600px"></div>
+      	<div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">Space Action Hero</div>
+      </div>
+    </div>
   </main>
 
 
