@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-     <head>
+<html lang="en">
+
+   <head>
       <meta charset="UTF-8">
       <!--Sets the title for the website. This appears in the browser tab.-->
       <title>Markert Sound :: Portfolio</title>
@@ -18,23 +18,22 @@
       <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
       <!-- Custom styles for this template. This is last of the CSS stylesheets, so it can override the Bootsrap CSS. Change the name to the name of your style sheet-->
       <link rel="stylesheet" type="text/css" href="style.css">
-    
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <script src="TemplateData/UnityProgress.js"></script>
-    <script src="Build/UnityLoader.js"></script>
-    <script>
+     
+      <script src="TemplateData/UnityProgress.js"></script>
+      <script src="Build/UnityLoader.js"></script>
+      <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Desktop.json", {onProgress: UnityProgress});
-    </script>
-  </head>
+      </script>
+   </head>
+
   <body>
-    <div id="wrapper">
       <header>
         <div class="container-fluid">
             <img class="logo" src="images/markertsoundheader.png" alt="Portfolio Logo" height="292" width="1386" class="img-fluid logo">
         </div>
       </header>
-    
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
         <a class="btn btn-dark" type="button" href="index.html">Home
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -61,18 +60,21 @@
           </ul>
         </div>  
       </nav>
-    
-    <div class="webgl-content">
-      <div id="unityContainer" style="width: 960px; height: 600px"></div>
-      <div class="footer">
+
+      <main>
+        <div class="webgl-content">
+        <div id="unityContainer" style="width: 960px; height: 600px"></div>
+        <div class="footer">
         <div class="webgl-logo"></div>
         <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
         <div class="title">Space Action Hero</div>
-      </div>
-    </div>
-    </div>
-  </body>
-  <footer>
+        </div>
+        </div>
+      </main>
+
+
+
+      <footer>
         <div class="row icons">
           <div class="col-sm-4" >
             <a target="_blank" href="https://www.facebook.com/MarkertSound">
@@ -103,10 +105,10 @@
           </small>
         </div>
       </footer>
-    </div>
   </body>
       <!--jQuery, Popper, and Bootstrap Javascript files-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
 </html>
