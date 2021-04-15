@@ -1,0 +1,278 @@
+<html>
+<head>
+<title>Handout 5 - Part C</title>
+<style type="text/css">
+	h1 {		color: 				red; 
+				text-align: 		center; }
+	body {		background-color: 	lightblue; }
+	#box1 {		position:			relative;
+				top:				0px;
+				margin:				auto;
+				width:				800px;
+				height:				600px;
+				border:				5px solid black;
+				background-color:	lightgreen; }
+	#display1a {position:			absolute;
+				top:				100px;
+				left:				120px;
+				width:				175px;
+				height:				300px;
+				border:				5px solid black;
+				background-color:	white; 
+				overflow:			hidden; }
+	#display1b {position:			absolute;
+				top:				100px;
+				left:				320px;
+				width:				175px;
+				height:				300px;
+				border:				5px solid black;
+				background-color:	white; 
+				overflow:			hidden; }
+	#display1c {position:			absolute;
+				top:				100px;
+				left:				520px;
+				width:				175px;
+				height:				300px;
+				border:				5px solid black;
+				background-color:	white; 
+				overflow:			hidden; }
+	#display2a {position:			absolute;
+				top:				450px;
+				left:				120px;
+				width:				175px;
+				height:				50px;
+				border:				5px solid black;
+				background-color:	white; 
+				overflow:			hidden; }
+	#display2b {position:			absolute;
+				top:				450px;
+				left:				320px;
+				width:				175px;
+				height:				50px;
+				border:				5px solid black;
+				background-color:	white; 
+				overflow:			hidden; }
+	#display2c {position:			absolute;
+				top:				450px;
+				left:				520px;
+				width:				175px;
+				height:				50px;
+				border:				5px solid black;
+				background-color:	white; 
+				overflow:			hidden; }
+	#button  {	position: 			absolute; 
+				top: 				550px; 
+				left: 				40px; 
+				box-shadow: 		5px 5px #888888;
+				font-size: 			24px;
+				border-radius: 		12px;
+				width:				90%; }
+	#button:hover {background-color: orange;
+				color:				white; }
+	#midlinea {	position:			absolute;
+				top:				240px;
+				left:				320px;
+				width:				185px;
+				height:				5px; 
+				background-color:	black; }
+	#midlineb {	position:			absolute;
+				top:				240px;
+				left:				120px;
+				width:				185px;
+				height:				5px; 
+				background-color:	black; }
+	#midlinec {	position:			absolute;
+				top:				240px;
+				left:				520px;
+				width:				185px;
+				height:				5px; 
+				background-color:	black; }
+	#header1 {	color:				blue;
+				z-index:			9999; }
+	#p1 	 {	text-align:			center;
+				font-weight: 		bold; }
+	#p2 	 {	text-align:			center;
+				font-weight: 		bold; }
+	#p3 	 {	text-align:			center;
+				font-weight: 		bold; }
+	
+	
+</style>
+<script src="jquery.js"></script>
+<script>
+
+	$(document).ready(function() {
+		$("#display1a").css('background-image', 'url("strip.png")');
+		$("#display1a").css('background-position-x', '0px');
+		$("#display1a").css('background-position-y', '125px');
+
+		$("#display1b").css('background-image', 'url("strip.png")');
+		$("#display1b").css('background-position-x', '0px');
+		$("#display1b").css('background-position-y', '125px');
+
+		$("#display1c").css('background-image', 'url("strip.png")');
+		$("#display1c").css('background-position-x', '0px');
+		$("#display1c").css('background-position-y', '125px');
+
+		$("#button").click(function() {
+			//GENERATES 3 RANDOM NUMBERS A, B, C
+			randNumA = Math.floor(Math.random() * 8);
+			console.log("randA = " + randNumA);
+
+			randNumB = Math.floor(Math.random() * 8);
+			console.log("randB = " + randNumB);
+
+			randNumC = Math.floor(Math.random() * 8);
+			console.log("randC = " + randNumC);
+
+			//DETERMINES Y POSITION AND TEXT DEPENDING ON RANDOM NUMBER
+			//FOR SLOT A
+			if (randNumA == 0) {
+				backgroundPosYA = 50
+				resultTextA = 'BAR';
+			} else if (randNumA == 1) {
+				backgroundPosYA = 1100
+				resultTextA = 'BELL';
+			} else if (randNumA == 2) {
+				backgroundPosYA = 950
+				resultTextA = 'CHERRY';
+			} else if (randNumA == 3) {
+				backgroundPosYA = 800
+				resultTextA = 'CLOVER';
+			} else if (randNumA == 4) {
+				backgroundPosYA = 650
+				resultTextA = 'LEMON';
+			} else if (randNumA == 5) {
+				backgroundPosYA = 500
+				resultTextA = 'DIAMOND';
+			} else if (randNumA == 6) {
+				backgroundPosYA = 350
+				resultTextA = 'SEVEN';
+			} else if (randNumA == 7) {
+				backgroundPosYA = 200
+				resultTextA = 'STRAWBERRY';
+			}
+
+			//FOR SLOT B
+			if (randNumB == 0) {
+				backgroundPosYB = 50
+				resultTextB = 'BAR';
+			} else if (randNumB == 1) {
+				backgroundPosYB = 1100
+				resultTextB = 'BELL';
+			} else if (randNumB == 2) {
+				backgroundPosYB = 950
+				resultTextB = 'CHERRY';
+			} else if (randNumB == 3) {
+				backgroundPosYB = 800
+				resultTextB = 'CLOVER';
+			} else if (randNumB == 4) {
+				backgroundPosYB = 650
+				resultTextB = 'LEMON';
+			} else if (randNumB == 5) {
+				backgroundPosYB = 500
+				resultTextB = 'DIAMOND';
+			} else if (randNumB == 6) {
+				backgroundPosYB = 350
+				resultTextB = 'SEVEN';
+			} else if (randNumB == 7) {
+				backgroundPosYB = 200
+				resultTextB = 'STRAWBERRY';
+			}
+
+			//FOR SLOT C
+			if (randNumC == 0) {
+				backgroundPosYC = 50
+				resultTextC = 'BAR';
+			} else if (randNumC == 1) {
+				backgroundPosYC = 1100
+				resultTextC = 'BELL';
+			} else if (randNumC == 2) {
+				backgroundPosYC = 950
+				resultTextC = 'CHERRY';
+			} else if (randNumC == 3) {
+				backgroundPosYC = 800
+				resultTextC = 'CLOVER';
+			} else if (randNumC == 4) {
+				backgroundPosYC = 650
+				resultTextC = 'LEMON';
+			} else if (randNumC == 5) {
+				backgroundPosYC = 500
+				resultTextC = 'DIAMOND';
+			} else if (randNumC == 6) {
+				backgroundPosYC = 350
+				resultTextC = 'SEVEN';
+			} else if (randNumC == 7) {
+				backgroundPosYC = 200
+				resultTextC = 'STRAWBERRY';
+			}
+
+			//CALCULATES ROTATION VALUE FOR A, B, C
+			rotationValueA = backgroundPosYA + 3600
+			console.log("rotationValueA = " + rotationValueA);
+
+			rotationValueB = backgroundPosYB + 3600
+			console.log("rotationValueB = " + rotationValueB);
+
+			rotationValueC = backgroundPosYC + 3600
+			console.log("rotationValueC = " + rotationValueC);
+
+			//ANIMATES SLOT A, B, C AND UPDATES TEXT AT FINISH
+			$("#display1a").animate({backgroundPositionY: rotationValueA + "px"}, 2000, "swing", function() {
+					$("#display1a").css('background-position-y', backgroundPosYA + 'px');
+					$("#p1").text(resultTextA);
+			});
+
+			$("#display1b").animate({backgroundPositionY: rotationValueB + "px"}, 3000, "swing", function() {
+					$("#display1b").css('background-position-y', backgroundPosYB + 'px');
+					$("#p2").text(resultTextB);
+			});
+
+			$("#display1c").animate({backgroundPositionY: rotationValueC + "px"}, 4000, "swing", function() {
+					$("#display1c").css('background-position-y', backgroundPosYC + 'px');
+					$("#p3").text(resultTextC);
+
+					//  DETERMINES IF SPIN IS A WINNER, REMOVES BUTTON, CHANGES TEXT
+					//  changed && to || for testing purposes
+					if (randNumA == randNumB && randNumB == randNumC) {
+						$("#header1").text("WINNER!!!");
+						$("#header1").css({color: 'yellow'});
+						$("#header1").animate({fontSize: '60px'}, 3000);
+						$("#button").hide();
+						$("#box1").css({backgroundColor: "#aa0000"});
+					}
+			});
+		});
+	});
+
+</script>
+</head>
+
+<body>
+<h1>Handout 5 by Chris Markert</h1>
+<div id="box1">
+	<h1 id="header1">SLOT MACHINE</h1>
+	<div id="display1a">
+	</div>
+	<div id="display1b">
+	</div>
+	<div id="display1c">
+	</div>
+	<div id="display2a">
+		<p id="p1">RESULT</p>
+	</div>
+	<div id="display2b">
+		<p id="p2">RESULT</p>
+	</div>
+	<div id="display2c">
+		<p id="p3">RESULT</p>
+	</div>
+	<hr id="midlinea" />
+	<hr id="midlineb" />
+	<hr id="midlinec" />
+	<input type="button" id="button" value="SPIN" />
+</div>
+
+
+</body>
+</html>
